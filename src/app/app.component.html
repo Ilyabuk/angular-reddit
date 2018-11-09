@@ -4,14 +4,19 @@
 
 <div class="field">
   <label for="title">Title:</label>
-  <input name="title" >
+  <input name="title" required minlength="5" #newtitle>
 </div>
 
 <div class = "field">
     <label for="link">Link:</label>
-    <input name="title">
+    <input name="title" #newlink>
 </div>
-</form>
 
+<button (click)="addArticle(newtitle, newlink)"
+  class="ui medium brown button">
+Стр. 62
+</button>
+
+</form>
 
 <router-outlet></router-outlet>
